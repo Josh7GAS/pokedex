@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 public class PokemonController {
 
     private PokedexRepository repository;
-    public PokemonController(PokedexRepository repository){this.repository = repository}
+    public PokemonController(PokedexRepository repository){this.repository = repository;}
 
     @GetMapping
     public Flux<Pokemon> getAllPokemon(){return repository.findAll();}
